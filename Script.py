@@ -1,12 +1,12 @@
 import os
-import re
-import json
+import re   #it can sense patterns from data
+import json  #javscript object notation helps to convert data in JSON and from json to norml data
 import datetime
-from google.oauth2.credentials import Credentials
-from google_auth_oauthlib.flow import InstalledAppFlow
-from google.auth.transport.requests import Request
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
+from google.oauth2.credentials import Credentials       #Credentials ek class hai jo OAuth2 authorization ke baad milne wale access tokens ko manage karti hai. Ye tokens user ke Gmail account ko access karne ke liye use hote hain
+from google_auth_oauthlib.flow import InstalledAppFlow   #first time login use to generate token
+from google.auth.transport.requests import Request      # Token refresh karne ke liye
+from googleapiclient.discovery import build             #it makes client which is a bridge btween servers and code
+from googleapiclient.errors import HttpError         #API me error handling
 
 SCOPES = ['https://www.googleapis.com/auth/gmail.modify']
 USER_ID = 'me'
@@ -170,5 +170,4 @@ if __name__ == '__main__':  # Main function
     # Call label_incoming_emails() with query as a parameter
     label_incoming_emails(service, query)
 
-    # Save the updated label_dict back to the file
-    save_label_dict(label_dict
+    save_label_dict(label_dict     # Save the updated label_dict back to the file
