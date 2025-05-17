@@ -15,15 +15,11 @@ This project organizes your Gmail subscriptions into neatly labeled folders. It 
 
 ## Setup
 
-### Clone the Repository:
-```bash
-git clone https://github.com/nmartin15/gmailorganizer.git
-
 Install Dependencies:
 pip install --upgrade google-api-python-client google-auth google-auth-oauthlib google-auth-httplib2
 
 Get Gmail API credentials:
-Visit Google Cloud Console, create a project and enable Gmail API. Download the credentials.json file and place it in the project folder.
+Visited Google Cloud Console, created a project and enabled Gmail API. Downloaded the credentials.json file and place it in the project folder.
 
 Run the Script:
 python script.py
@@ -35,6 +31,3 @@ Authenticate using OAuth2
 Scan your Gmail inbox for emails based on a set query
 Create unique labels for each sender
 Move emails to the appropriate label folders
-
-License:
-MIT License
